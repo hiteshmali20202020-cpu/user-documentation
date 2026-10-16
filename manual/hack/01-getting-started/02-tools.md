@@ -50,3 +50,9 @@ with PHP.  Composer can be thought of as an equivalent to `npm` or `yarn`.
 [hack-mode]: https://github.com/hhvm/hack-mode
 [hacktest]: https://github.com/hhvm/hacktest
 [vim-hack]: https://github.com/hhvm/vim-hack
+use namespace HH\Lib\IO;
+
+<<__EntryPoint>>
+async function main(): Awaitable<void> {
+  await IO\request_output()->writeAllAsync("Hello World!\n");
+}
